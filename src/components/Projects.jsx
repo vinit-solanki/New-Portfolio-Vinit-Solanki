@@ -3,10 +3,10 @@ import Project from "./Project";
 
 function Projects() {
  const projects=[
-   {projectName:"Learn-React",description:"It is website to learn react.js in a simpler way by giving examples on each topic seggregated into 2 levels.",techStack:"React, React-Docs, Tailwind-CSS", link:"https://learn-react-six-rose.vercel.app/"},
-    {projectName:"OTT Platform",description:"It is an OTT platform with an unique feature of sharing queue for subscriptoin partern match-up (yet to be implemented).",techStack:"React, Tailwind-CSS", link:"https://github.com/vinit-solanki/streaming_website"},
+    {projectName:"DocPlus",description:"DocPlus is a web-based healthcare platform. It is designed to assist patients with Healthcare-related inquiries, Appointment booking support, General health and wellness information,",techStack:"Node.js/Express.js, MongoDB, React.js,Tailwind-CSS, JWT", link:"https://docplus-frontend.vercel.app/"},
+    {projectName:"Learn-React",description:"It is website to learn react.js in a simpler way by giving examples on each topic seggregated into 2 levels.",techStack:"React, React-Docs, Tailwind-CSS", link:"https://learn-react-six-rose.vercel.app/"},
+    {projectName:"OTT Platform",description:"It is an OTT platform with an unique feature of sharing queue for subscriptoin partern match-up (yet to be implemented).",techStack:"React, Tailwind-CSS", link:"https://streaming-website-zeta.vercel.app/"},
     {projectName:"Pokedex",description:"It is a pokedex with the infinite scroll of more than 10,000 pokemons and has a mini game for batteling pokemon with random allotment with the computer.",techStack:"React, Tailwind-CSS", link:"https://my-pokemons-pearl.vercel.app/"},
-    {projectName:"Portfolio Website",description:"Till now I have created 3 version of my portfolio website, this is the latest one.",techStack:"React, Tailwind-CSS", link:""},
     {projectName:"My Drawer",description:"It is a simple website builder with predefined template giving user to drag and drop assets such as buttons,textareas,input and photos",techStack:"React, react-dnd, Tailwind-CSS", link:"https://my-drawer.vercel.app/"},
     {projectName:"Fragrance Yard Perfumes",description:"It is a simple landing pages website to showcase a local brand their perfumes",techStack:"HTML, CSS, JS", link:"https://fragrance-yard-perfume-website.vercel.app/"},
  ]

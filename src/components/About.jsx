@@ -92,7 +92,6 @@ function About() {
                 <p className="text-gray-400 text-md">
                   St. Pius X High School, Mulund, Mumbai
                 </p>
-                <p className="text-sm text-gray-300">Percentage: 80.40%</p>
               </div>
             </div>
 
@@ -107,7 +106,6 @@ function About() {
                 <p className="text-gray-400 text-md">
                   K.J. Somaiya College of Science & Commerce, Vidyavihar
                 </p>
-                <p className="text-sm text-gray-300">Percentage: 73.50%</p>
               </div>
             </div>
 
@@ -125,7 +123,7 @@ function About() {
                   Vivekanand Education Society's Institute of Technology,
                   Chembur, Mumbai
                 </p>
-                <p className="text-sm text-gray-300">CGPA: 8.52 (Till Sem-4)</p>
+                <p className="text-sm text-gray-300">CGPA: 8.78 (Till Sem-5)</p>
               </div>
             </div>
           </div>
