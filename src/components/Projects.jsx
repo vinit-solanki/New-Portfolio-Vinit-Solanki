@@ -4,6 +4,7 @@ import Project from "./Project";
 function Projects() {
  const projects=[
     {projectName:"DocPlus",description:"DocPlus is a web-based healthcare platform. It is designed to assist patients with Healthcare-related inquiries, Appointment booking support, General health and wellness information,",techStack:"Node.js/Express.js, MongoDB, React.js,Tailwind-CSS, JWT", link:"https://docplus-frontend.vercel.app/"},
+    {projectName:"Tunist",description:"Tunist is an AI-powered music recommendation platform that suggests songs based on user emotions, delivering a personalized and dynamic audio experience.",techStack:"Node.js/Express.js, PostgreSQL, MongoDB, React.js, Redis, Cloudinary, Tailwind-CSS", link:"https://tunist-frontend.vercel.app/"},
     {projectName:"Learn-React",description:"It is website to learn react.js in a simpler way by giving examples on each topic seggregated into 2 levels.",techStack:"React, React-Docs, Tailwind-CSS", link:"https://learn-react-six-rose.vercel.app/"},
     {projectName:"OTT Platform",description:"It is an OTT platform with an unique feature of sharing queue for subscriptoin partern match-up (yet to be implemented).",techStack:"React, Tailwind-CSS", link:"https://streaming-website-zeta.vercel.app/"},
     {projectName:"Pokedex",description:"It is a pokedex with the infinite scroll of more than 10,000 pokemons and has a mini game for batteling pokemon with random allotment with the computer.",techStack:"React, Tailwind-CSS", link:"https://my-pokemons-pearl.vercel.app/"},
