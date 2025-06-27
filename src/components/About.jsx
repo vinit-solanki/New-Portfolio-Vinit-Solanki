@@ -1,129 +1,126 @@
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faDotCircle } from "@fortawesome/free-solid-svg-icons";
-import {HTML5} from "../assets/html.png";
-import {CSS3} from "../assets/css.png";
-import {JavaScript} from "../assets/js.png";
-import {ReactImg} from "../assets/react.png";
-import {CPP} from "../assets/cpp.png";
-import {Python} from "../assets/python.png";
 
 function About() {
+  const categorizedSkills = {
+    Frontend: ["HTML", "CSS", "JavaScript", "React.js"],
+    Backend: ["Node.js", "Express.js", "Docker"],
+    Databases: ["MongoDB", "PostgreSQL", "Redis"],
+    "ML/AI Tools": ["Python", "NumPy", "Pandas", "scikit-learn"],
+    Others: ["n8n", "Canva"],
+  };
+
+  const experiences = [
+    {
+      org: "Panache Digilife",
+      desc: "Worked on time series analysis and modeling to build a SARIMAX model to predict AQI for the upcoming week.",
+      color: "text-blue-400",
+    },
+    {
+      org: "Suvidha Foundation",
+      desc: "Built a text summarization tool for the foundation and actively participated in fundraising campaigns for underprivileged girls.",
+      color: "text-yellow-400",
+    },
+    {
+      org: "AI-CoLegion (VESIT)",
+      desc: "Managed events through social media and graphic design, co-hosted a Machine Learning Bootcamp at Winter School 2025, and contributed to the club website.",
+      color: "text-green-400",
+    },
+  ];
+
   return (
-    <div className="flex flex-col w-screen min-h-screen bg-black">
-      <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mt-7 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg shadow-white tracking-wide rounded-md">
-        <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          ABOUT ME
-        </span>
+    <div className="flex flex-col w-screen min-h-screen bg-black px-4 md:px-12 py-12">
+      {/* Heading */}
+      <h1 className="text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 tracking-wide mb-12">
+        ABOUT ME
       </h1>
 
-      <div className=" w-full h-full flex flex-col justify-center items-center text-white md:lg:flex-row pr-6">
-        <div className="w-full h-full flex flex-col gap-y-2 p-10 md:lg:w-1/2 h-full">
-          <div className="flex flex-col justify-center items-center gap-y-2 h-full border-2 border-gray-600 w-full p-3 rounded-md shadow-sm shadow-gray-300 hover:translate-y-[-2px] duration-500 hover:shadow-md shadow-gray-100">
-            <div className="underline-animation text-2xl font-bold w-full text-center p-2">
-              Skills
-            </div>
-            <div className="w-full p-4 m-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-0 gap-y-7 justify-items-center">
-              <img
-                width={60}
-                height={50}
-                className="bg-red-300 rounded-md m-1 hover:scale-110 transition duration-400 shadow-lg shadow-red-300"
-                src={HTML5}
-                alt="HTML"
-              />
-              <img
-                width={60}
-                height={50}
-                className="bg-violet-300 rounded-md m-1 hover:scale-110 transition duration-400 shadow-lg shadow-violet-300"
-                src={CSS3}
-                alt="CSS"
-              />
-              <img
-                width={60}
-                height={50}
-                className="bg-yellow-700 rounded-md m-1 hover:scale-110 transition duration-400 shadow-lg shadow-yellow-700"
-                src={JavaScript}
-                alt="JS"
-              />
-              <img
-                width={60}
-                height={50}
-                className="rounded-md m-1 hover:scale-110 transition duration-400 shadow-lg shadow-blue-300"
-                src={ReactImg}
-                alt="React.js"
-              />
-              <img
-                width={60}
-                height={50}
-                className="bg-white bg-opacity-50 rounded-md m-1 hover:scale-110 transition duration-400 shadow-lg shadow-white"
-                src={CPP}
-                alt="C/C++"
-              />
-              <img
-                width={60}
-                height={50}
-                className="bg-yellow-950 rounded-md m-1 hover:scale-110 transition duration-400 shadow-lg shadow-yellow-300"
-                src={Python}
-                alt="Python"
-              />
+      <div className="flex flex-col md:flex-row gap-8 text-white">
+        {/* Left Column */}
+        <div className="flex flex-col gap-8 w-full md:w-1/2">
+          {/* Skills Section */}
+          <div className="backdrop-blur-sm bg-white/5 border border-white/20 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+            <h2 className="text-2xl font-semibold mb-6 text-center text-white/90">Skills</h2>
+            <div className="flex flex-col gap-6">
+              {Object.entries(categorizedSkills).map(([category, skills]) => (
+                <div key={category}>
+                  <h3 className="text-pink-400 font-medium text-lg mb-3">{category}</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {skills.map((skill, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 rounded-full border border-white/30 text-sm text-white/80 hover:bg-white/10 hover:text-white transition duration-200"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="flex flex-col gap-y-3 h-full border-2 border-gray-600 w-full p-4 rounded-md shadow-sm shadow-gray-300 hover:translate-y-[-2px] duration-500 hover:shadow-md shadow-gray-100">
-            <div className="underline-animation text-2xl font-bold w-full text-center p-2">
-              Location
-            </div>
-            <div className="w-full flex gap-x-4 justify-center items-center p-1 hover:scale-110 transition duration-400">
-              <FontAwesomeIcon icon={faLocationDot} className="text-3xl" />
-              <p className="text-xl">Mumbai, Maharashtra, India.</p>
+
+          {/* Location Section */}
+          <div className="backdrop-blur-sm bg-white/5 border border-white/20 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+            <h2 className="text-2xl font-semibold text-center mb-4 text-white/90">Location</h2>
+            <div className="flex justify-center items-center gap-3 text-white/80 text-lg hover:scale-105 transition duration-300">
+              <FontAwesomeIcon icon={faLocationDot} className="text-red-400 text-2xl" />
+              Mumbai, Maharashtra, India
             </div>
           </div>
         </div>
-        <div className="bg-white bg-opacity-10 rounded-lg m-2 flex flex-col justify-center items-center p-3 md:lg:w-1/2 h-full">
-          <div className="glow text-3xl font-bold w-full p-2">Education</div>
-          <div className="flex flex-col gap-y-3 border-2 border-dotted border-gray-500 w-full h-full p-5 rounded-lg hover:shadow-white shadow-sm duration-500 translate-y-[-3px] mt-2">
-            <div className="p-2 flex gap-x-4 text-justify items-start">
-              <FontAwesomeIcon
-                icon={faDotCircle}
-                className="text-green-500 text-lg"
-              />
-              <div className="flex flex-col font-semibold">
-                <p className="text-lg">School Secondary Certificate (SSC)</p>
-                <p className="text-gray-400 text-md">
-                  St. Pius X High School, Mulund, Mumbai
-                </p>
+
+        {/* Right Column - Education + Experience */}
+        <div className="backdrop-blur-sm bg-white/5 border border-white/20 rounded-xl w-full md:w-1/2 p-6 shadow-md hover:shadow-xl transition duration-300 flex flex-col gap-8">
+          {/* Education Section */}
+          <div>
+            <h2 className="text-3xl font-semibold text-center text-white/90 mb-6">Education</h2>
+            <div className="flex flex-col gap-6 border border-dashed border-gray-500 p-4 rounded-md">
+              <div className="flex gap-4 items-start">
+                <FontAwesomeIcon icon={faDotCircle} className="text-green-400 mt-1 text-lg" />
+                <div>
+                  <p className="font-semibold text-lg text-white/90">School Secondary Certificate (SSC)</p>
+                  <p className="text-white/50">St. Pius X High School, Mulund, Mumbai</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <FontAwesomeIcon icon={faDotCircle} className="text-yellow-400 mt-1 text-lg" />
+                <div>
+                  <p className="font-semibold text-lg text-white/90">Higher Secondary Certificate (HSC)</p>
+                  <p className="text-white/50">K.J. Somaiya College of Science & Commerce, Vidyavihar</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <FontAwesomeIcon icon={faDotCircle} className="text-pink-400 mt-1 text-lg" />
+                <div>
+                  <p className="font-semibold text-lg text-white/90">
+                    B.E. in Artificial Intelligence & Data Science
+                  </p>
+                  <p className="text-white/50">
+                    Vivekanand Education Society's Institute of Technology, Chembur, Mumbai
+                  </p>
+                  <p className="text-sm text-white/40 mt-1">CGPA: 8.78 (Till Sem-6)</p>
+                </div>
               </div>
             </div>
+          </div>
 
-            {/* HSC */}
-            <div className="p-2 flex gap-x-4 text-justify items-start">
-              <FontAwesomeIcon
-                icon={faDotCircle}
-                className="text-yellow-500 text-lg"
-              />
-              <div className="flex flex-col font-semibold">
-                <p className="text-lg">Higher Secondary Certificate (HSC)</p>
-                <p className="text-gray-400 text-md">
-                  K.J. Somaiya College of Science & Commerce, Vidyavihar
-                </p>
-              </div>
-            </div>
-
-            {/* Bachelor's */}
-            <div className="p-2 flex gap-x-4 text-justify items-start">
-              <FontAwesomeIcon
-                icon={faDotCircle}
-                className="text-red-500 text-lg"
-              />
-              <div className="flex flex-col font-semibold">
-                <p className="text-lg">
-                  Bachelor of Engineering in A.I. & Data Science
-                </p>
-                <p className="text-gray-400 text-md">
-                  Vivekanand Education Society's Institute of Technology,
-                  Chembur, Mumbai
-                </p>
-                <p className="text-sm text-gray-300">CGPA: 8.78 (Till Sem-5)</p>
-              </div>
+          {/* Experience Section */}
+          <div>
+            <h2 className="text-3xl font-semibold text-center text-white/90 mb-6">Experience</h2>
+            <div className="flex flex-col gap-6 border border-dashed border-gray-500 p-4 rounded-md">
+              {experiences.map((exp, idx) => (
+                <div className="flex gap-4 items-start" key={idx}>
+                  <FontAwesomeIcon icon={faDotCircle} className={`${exp.color} mt-1 text-lg`} />
+                  <div>
+                    <p className={`font-semibold text-lg ${exp.color}`}>{exp.org}</p>
+                    <p className="text-white/60">{exp.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
